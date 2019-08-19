@@ -6,17 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://blog.0x0.me">
-  <title>随笔 | 0xme&#39;s Blog</title>
+  <title>test | 0xme&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="0xme">
-<meta property="og:type" content="website">
-<meta property="og:title" content="随笔">
-<meta property="og:url" content="http://blog.0x0.me/随笔/index.html">
+  <meta name="description" content="测试图片使用使用Hexo 3的新功能引用图片资源 12&amp;#123;% asset_img slug [title] %&amp;#125;&amp;#123;% asset_img 图片名称 图片描述 %&amp;#125;">
+<meta name="keywords" content="0xme">
+<meta property="og:type" content="article">
+<meta property="og:title" content="test">
+<meta property="og:url" content="http://blog.0x0.me/2019/08/19/test/index.html">
 <meta property="og:site_name" content="0xme&#39;s Blog">
+<meta property="og:description" content="测试图片使用使用Hexo 3的新功能引用图片资源 12&amp;#123;% asset_img slug [title] %&amp;#125;&amp;#123;% asset_img 图片名称 图片描述 %&amp;#125;">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-18T04:48:04.121Z">
+<meta property="og:image" content="http://blog.0x0.me/2019/08/19/test/1.png">
+<meta property="og:updated_time" content="2019-08-19T03:53:48.084Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="随笔">
+<meta name="twitter:title" content="test">
+<meta name="twitter:description" content="测试图片使用使用Hexo 3的新功能引用图片资源 12&amp;#123;% asset_img slug [title] %&amp;#125;&amp;#123;% asset_img 图片名称 图片描述 %&amp;#125;">
+<meta name="twitter:image" content="http://blog.0x0.me/2019/08/19/test/1.png">
   
     <link rel="alternative" href="/atom.xml" title="0xme&#39;s Blog" type="application/atom+xml">
   
@@ -170,27 +175,51 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-test" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      随笔
+      test
     </h1>
   
 
         
-        <a href="/随笔/index.html" class="archive-article-date">
-  	<time datetime="2019-08-18T04:48:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-18</time>
+        <a href="/2019/08/19/test/" class="archive-article-date">
+  	<time datetime="2019-08-19T03:45:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="测试图片使用"><a href="#测试图片使用" class="headerlink" title="测试图片使用"></a>测试图片使用</h2><p>使用Hexo 3的新功能引用图片资源</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img slug [title] %&#125;</span><br><span class="line">&#123;% asset_img 图片名称 图片描述 %&#125;</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<h3 id="如下例子"><a href="#如下例子" class="headerlink" title="如下例子"></a>如下例子</h3><p>插入图片</p>
+<img src="/2019/08/19/test/1.png" title="test_picture">
+
+
+
+<p>参考：<a href="https://hexo.io/zh-cn/docs/asset-folders" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/asset-folders</a></p>
+<h1 id="资源文件夹"><a href="#资源文件夹" class="headerlink" title="资源文件夹"></a>资源文件夹</h1><p>资源（Asset）代表 <code>source</code> 文件夹中除了文章以外的所有文件，例如图片、CSS、JS 文件等。比方说，如果你的Hexo项目中只有少量图片，那最简单的方法就是将它们放在 <code>source/images</code> 文件夹中。然后通过类似于 <code>![](/images/image.jpg)</code> 的方法访问它们。</p>
+<h2 id="文章资源文件夹"><a href="#文章资源文件夹" class="headerlink" title="文章资源文件夹"></a>文章资源文件夹</h2><p>对于那些想要更有规律地提供图片和其他资源以及想要将他们的资源分布在各个文章上的人来说，Hexo也提供了更组织化的方式来管理资源。这个稍微有些复杂但是管理资源非常方便的功能可以通过将 <code>config.yml</code> 文件中的 <code>post_asset_folder</code> 选项设为 <code>true</code> 来打开。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_config.ymlpost_asset_folder: true</span><br></pre></td></tr></table></figure>
+
+<p>当资源文件管理功能打开后，Hexo将会在你每一次通过 <code>hexo new [layout] &lt;title&gt;</code> 命令创建新文章时自动创建一个文件夹。这个资源文件夹将会有与这个文章文件一样的名字。将所有与你的文章有关的资源放在这个关联文件夹中之后，你可以通过相对路径来引用它们，这样你就得到了一个更简单而且方便得多的工作流。</p>
+<h2 id="相对路径引用的标签插件"><a href="#相对路径引用的标签插件" class="headerlink" title="相对路径引用的标签插件"></a>相对路径引用的标签插件</h2><p>通过常规的 markdown 语法和相对路径来引用图片和其它资源可能会导致它们在存档页或者主页上显示不正确。在Hexo 2时代，社区创建了很多插件来解决这个问题。但是，随着Hexo 3 的发布，许多新的标签插件被加入到了核心代码中。这使得你可以更简单地在文章中引用你的资源。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_path slug %&#125;&#123;% asset_img slug [title] %&#125;&#123;% asset_link slug [title] %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>比如说：当你打开文章资源文件夹功能后，你把一个 <code>example.jpg</code> 图片放在了你的资源文件夹中，如果通过使用相对路径的常规 markdown 语法 <code>![](/example.jpg)</code> ，它将 <em>不会</em> 出现在首页上。（但是它会在文章中按你期待的方式工作）</p>
+<p>正确的引用图片方式是使用下列的标签插件而不是 markdown ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img example.jpg This is an example image %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>通过这种方式，图片将会同时出现在文章和主页以及归档页中。</p>
+
       
 
       
@@ -274,7 +303,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://blog.0x0.me/随笔/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://blog.0x0.me/2019/08/19/test/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -286,6 +315,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2019/08/18/数据库系统相关表学习/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数据库系统相关表学习</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -336,7 +375,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

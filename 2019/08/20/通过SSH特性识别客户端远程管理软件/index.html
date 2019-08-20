@@ -6,16 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://blog.0x0.me">
-  <title>Tag: HashCat | 0xme&#39;s Blog</title>
+  <title>通过SSH特性识别客户端远程管理软件 | 0xme&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="0xme">
-<meta property="og:type" content="website">
-<meta property="og:title" content="0xme&#39;s Blog">
-<meta property="og:url" content="http://blog.0x0.me/tags/HashCat/index.html">
+  <meta name="description" content="通过SSH特性识别客户端远程管理软件 Xmanager、SecureCRT、Putty等是运维/开发常用终端远程管理软件，那服务器端如何识别客户端使用了哪种远程管理软件，有没有什么方法可以检测？ 本次通过Wireshark抓取数据包分析SSH协议数据，利用在SSH的传输阶段版本协议交换过程中，客户端会携带终端远程维护软件相关版本信息，根据版本信息可识别出相应的软件。具体对应关系如下：    软件名">
+<meta name="keywords" content="ssh,Wireshark">
+<meta property="og:type" content="article">
+<meta property="og:title" content="通过SSH特性识别客户端远程管理软件">
+<meta property="og:url" content="http://blog.0x0.me/2019/08/20/通过SSH特性识别客户端远程管理软件/index.html">
 <meta property="og:site_name" content="0xme&#39;s Blog">
+<meta property="og:description" content="通过SSH特性识别客户端远程管理软件 Xmanager、SecureCRT、Putty等是运维/开发常用终端远程管理软件，那服务器端如何识别客户端使用了哪种远程管理软件，有没有什么方法可以检测？ 本次通过Wireshark抓取数据包分析SSH协议数据，利用在SSH的传输阶段版本协议交换过程中，客户端会携带终端远程维护软件相关版本信息，根据版本信息可识别出相应的软件。具体对应关系如下：    软件名">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://blog.0x0.me/2019/08/20/通过SSH特性识别客户端远程管理软件/1.png">
+<meta property="og:image" content="http://blog.0x0.me/2019/08/20/通过SSH特性识别客户端远程管理软件/2.png">
+<meta property="og:image" content="http://blog.0x0.me/2019/08/20/通过SSH特性识别客户端远程管理软件/3.png">
+<meta property="og:image" content="http://blog.0x0.me/2019/08/20/通过SSH特性识别客户端远程管理软件/4.png">
+<meta property="og:image" content="http://blog.0x0.me/2019/08/20/通过SSH特性识别客户端远程管理软件/5.png">
+<meta property="og:updated_time" content="2019-08-20T09:36:19.626Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="0xme&#39;s Blog">
+<meta name="twitter:title" content="通过SSH特性识别客户端远程管理软件">
+<meta name="twitter:description" content="通过SSH特性识别客户端远程管理软件 Xmanager、SecureCRT、Putty等是运维/开发常用终端远程管理软件，那服务器端如何识别客户端使用了哪种远程管理软件，有没有什么方法可以检测？ 本次通过Wireshark抓取数据包分析SSH协议数据，利用在SSH的传输阶段版本协议交换过程中，客户端会携带终端远程维护软件相关版本信息，根据版本信息可识别出相应的软件。具体对应关系如下：    软件名">
+<meta name="twitter:image" content="http://blog.0x0.me/2019/08/20/通过SSH特性识别客户端远程管理软件/1.png">
   
     <link rel="alternative" href="/atom.xml" title="0xme&#39;s Blog" type="application/atom+xml">
   
@@ -169,68 +179,230 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-通过SSH特性识别客户端远程管理软件" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/18/数据库系统相关表学习/" class="archive-article-date">
-  	<time datetime="2019-08-18T12:45:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-18</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/18/数据库系统相关表学习/">数据库系统相关表学习</a>
+    <h1 class="article-title" itemprop="name">
+      通过SSH特性识别客户端远程管理软件
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/08/20/通过SSH特性识别客户端远程管理软件/" class="archive-article-date">
+  	<time datetime="2019-08-20T09:25:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>通过SSH特性识别客户端远程管理软件</strong></p>
+<p>Xmanager、SecureCRT、Putty等是运维/开发常用终端远程管理软件，那服务器端如何识别客户端使用了哪种远程管理软件，有没有什么方法可以检测？</p>
+<p>本次通过<code>Wireshark</code>抓取数据包分析SSH协议数据，利用在SSH的<strong>传输阶段版本协议交换</strong>过程中，客户端会携带终端远程维护软件相关版本信息，根据版本信息可识别出相应的软件。具体对应关系如下：</p>
+<table>
+<thead>
+<tr>
+<th>软件名称</th>
+<th>标识</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Xmanager</td>
+<td><code>NetSarang</code></td>
+</tr>
+<tr>
+<td>SecureCRT</td>
+<td><code>SecureCRT</code></td>
+</tr>
+<tr>
+<td>Putty</td>
+<td><code>PuTTY</code></td>
+</tr>
+</tbody></table>
+<p>SSH建立连接过程：</p>
+<a id="more"></a>
+
+<img src="/2019/08/20/通过SSH特性识别客户端远程管理软件/1.png">
+
+<h3 id="抓包过程如下"><a href="#抓包过程如下" class="headerlink" title="抓包过程如下"></a><strong>抓包过程如下</strong></h3><p>使用<code>Wireshark</code>抓取本机网卡流量，选取要抓取的网卡，然后点击开始就捕获网络流量</p>
+<img src="/2019/08/20/通过SSH特性识别客户端远程管理软件/2.png">
+
+<h4 id="Xmanger-抓包测试"><a href="#Xmanger-抓包测试" class="headerlink" title="Xmanger 抓包测试"></a><strong>Xmanger</strong> 抓包测试</h4><p>通过分析抓取的流量报文，在完成TCP三次握手后，SSH进入传输阶段，服务器端和客户端会进行协议版本交换，此时客户端会上传SSH协议版本并携带远程维护软件的相关信息。如图：</p>
+<p>匹配标识：  <code>NetSarang</code></p>
+<img src="/2019/08/20/通过SSH特性识别客户端远程管理软件/3.png">
+
+
+
+<h4 id="SecureCRT抓包测试"><a href="#SecureCRT抓包测试" class="headerlink" title="SecureCRT抓包测试"></a><strong>SecureCRT抓包测试</strong></h4><p>同上，如图：</p>
+<p>匹配标识：<code>SecureCRT</code></p>
+<img src="/2019/08/20/通过SSH特性识别客户端远程管理软件/4.png">
+
+<h4 id="PuTTY抓包测试"><a href="#PuTTY抓包测试" class="headerlink" title="PuTTY抓包测试"></a><strong>PuTTY抓包测试</strong></h4><p>同上，如图：</p>
+<p>匹配标识：<code>PuTTY</code></p>
+<img src="/2019/08/20/通过SSH特性识别客户端远程管理软件/5.png">
+
+
+
+<h3 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h3><p>在大型网络中获取远程维护软件相关信息，可以在核心交换机旁路镜像网络流量方式，利用<code>SSH</code>的版本协议交换会携带终端软件标识的特性，筛选出各远程运维软件的使用情况。</p>
+<p>可选的抓包节点位置：</p>
+<ul>
+<li>核心交换机</li>
+<li>服务器</li>
+<li>堡垒机</li>
+<li>其他</li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/ds.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ssh</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySQL</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">HashCat</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Wireshark</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://blog.0x0.me/2019/08/20/通过SSH特性识别客户端远程管理软件/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/08/19/test/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">test</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -253,9 +425,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

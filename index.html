@@ -171,6 +171,109 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-通过SSH特性识别客户端远程管理软件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/20/通过SSH特性识别客户端远程管理软件/">通过SSH特性识别客户端远程管理软件</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/20/通过SSH特性识别客户端远程管理软件/" class="archive-article-date">
+  	<time datetime="2019-08-20T09:25:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>通过SSH特性识别客户端远程管理软件</strong></p>
+<p>Xmanager、SecureCRT、Putty等是运维/开发常用终端远程管理软件，那服务器端如何识别客户端使用了哪种远程管理软件，有没有什么方法可以检测？</p>
+<p>本次通过<code>Wireshark</code>抓取数据包分析SSH协议数据，利用在SSH的<strong>传输阶段版本协议交换</strong>过程中，客户端会携带终端远程维护软件相关版本信息，根据版本信息可识别出相应的软件。具体对应关系如下：</p>
+<table>
+<thead>
+<tr>
+<th>软件名称</th>
+<th>标识</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Xmanager</td>
+<td><code>NetSarang</code></td>
+</tr>
+<tr>
+<td>SecureCRT</td>
+<td><code>SecureCRT</code></td>
+</tr>
+<tr>
+<td>Putty</td>
+<td><code>PuTTY</code></td>
+</tr>
+</tbody></table>
+<p>SSH建立连接过程：</p>
+        
+          <a class="article-more-a" href="/2019/08/20/通过SSH特性识别客户端远程管理软件/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ssh</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Wireshark</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/20/通过SSH特性识别客户端远程管理软件/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-test" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -577,6 +680,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ssh</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Wireshark</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="0xme&#39;s Blog">
 <meta property="og:description" content="Hexo+yilia主题添加网页访问计数功能yilia主题添加网页访问统计在themes/yilia/layout/_partial/footer.ejs末尾&amp;lt;/footer&amp;gt;和&amp;lt;/div&amp;gt;之间添加如下代码： 1234567891011&amp;lt;% if (theme.busuanzi &amp;amp;&amp;amp; theme.busuanzi.enable)&amp;#123; %&amp;gt;">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-04T04:39:38.865Z">
+<meta property="og:updated_time" content="2019-09-04T06:13:17.401Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+yilia主题添加网页访问计数功能">
 <meta name="twitter:description" content="Hexo+yilia主题添加网页访问计数功能yilia主题添加网页访问统计在themes/yilia/layout/_partial/footer.ejs末尾&amp;lt;/footer&amp;gt;和&amp;lt;/div&amp;gt;之间添加如下代码： 1234567891011&amp;lt;% if (theme.busuanzi &amp;amp;&amp;amp; theme.busuanzi.enable)&amp;#123; %&amp;gt;">
@@ -202,7 +202,7 @@
 
 <a id="more"></a>
 
-<h3 id="在不同位置添加统计功能"><a href="#在不同位置添加统计功能" class="headerlink" title="在不同位置添加统计功能"></a>在不同位置添加统计功能</h3><p>根据不同的需求，需要在不同的位置显示你的文章阅读量，此处以在右上角的日期区域添加文章阅读量为例：<br>在<code>themes/yilia/layout/_partial/post/date.ejs</code> 原有代码的开头(不需要把新代码放入原代码块中，而是和原代码独立的两块）加入：</p>
+<h3 id="在不同位置添加统计功能"><a href="#在不同位置添加统计功能" class="headerlink" title="在不同位置添加统计功能"></a>在不同位置添加统计功能</h3><p>根据不同的需求，需要在不同的位置显示你的文章阅读量，此处以在右上角的日期区域添加文章阅读量为例：<br>在<font color="#FF0000"><code>themes/yilia/layout/_partial/post/date.ejs</code> </font>原有代码的开头(不需要把新代码放入原代码块中，而是和原代码独立的两块）加入：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> (theme.busuanzi &amp;&amp; theme.busuanzi.enable &amp;&amp; !index)&#123; %&gt;</span><br><span class="line">        &lt;!-- 不蒜子统计 --&gt;</span><br><span class="line">        &lt;span id=<span class="string">"busuanzi_container_page_pv"</span> style=<span class="string">'display:none'</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"&lt;%= class_name %&gt;"</span>&gt;</span><br><span class="line">              &lt;i <span class="class"><span class="keyword">class</span></span>=<span class="string">"icon-smile icon"</span>&gt;&lt;/i&gt; 阅读数：&lt;span id=<span class="string">"busuanzi_value_page_pv"</span>&gt;&lt;/span&gt;次</span><br><span class="line">        &lt;<span class="regexp">/span&gt;</span></span><br><span class="line"><span class="regexp">&lt;% &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>在文章中添加访问量<code>/themes/yilia/layout/_partial/article.ejs</code>中</p>
@@ -308,6 +308,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/09/04/Markdown常用语法/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Markdown常用语法
+        
+      </div>
+    </a>
   
   
     <a href="/2019/08/20/通过SSH特性识别客户端远程管理软件/" id="article-nav-older" class="article-nav-link-wrap">
